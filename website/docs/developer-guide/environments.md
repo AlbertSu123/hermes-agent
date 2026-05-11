@@ -426,7 +426,7 @@ See `environments/benchmarks/yc_bench/yc_bench_env.py` for a clean, well-documen
 | `max_agent_turns` | `int` | `30` | Max LLM calls per rollout |
 | `agent_temperature` | `float` | `1.0` | Sampling temperature |
 | `system_prompt` | `str` | `None` | System message for the agent |
-| `terminal_backend` | `str` | `"local"` | `local`, `docker`, `modal`, `daytona`, `ssh`, `singularity` |
+| `terminal_backend` | `str` | `"local"` | `local`, `docker`, `modal`, `daytona`, `vercel_sandbox`, `fastvm`, `ssh`, `singularity` |
 | `terminal_timeout` | `int` | `120` | Seconds per terminal command |
 | `terminal_lifetime` | `int` | `3600` | Max sandbox lifetime |
 | `dataset_name` | `str` | `None` | HuggingFace dataset identifier |
@@ -479,6 +479,11 @@ python my_env.py evaluate \
 
 - [Modal](https://modal.com) account and CLI: `pip install "hermes-agent[modal]"`
 - `MODAL_TOKEN_ID` and `MODAL_TOKEN_SECRET` environment variables
+
+### For FastVM-backed benchmark sandboxes
+
+- FastVM SDK: `pip install "hermes-agent[fastvm]"`
+- `FASTVM_API_KEY` environment variable
 
 ### For YC-Bench
 
